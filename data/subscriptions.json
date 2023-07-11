@@ -4,6 +4,7 @@
             "id": 1,
             "name": "Free",
             "price": 0,
+            "popular": false,
             "includes": [
                 "Basic Progression Tracking",
                 "Meal Plans",
@@ -15,6 +16,7 @@
             "id": 2,
             "name": "Lite",
             "price": 20,
+            "popular": true,
             "includes": [
                 "Progression Tracking",
                 "Meal Plans",
@@ -28,6 +30,7 @@
             "id": 3,
             "name": "Pro",
             "price": 40,
+            "popular": false,
             "includes": [
                 "Progression Tracking",
                 "Meal Plans",

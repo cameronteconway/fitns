@@ -2,6 +2,7 @@ type Subscription = {
     id: number;
     name: string;
     price: number | string;
+    popular: boolean;
     includes: string[];
     summary: string;
 };
@@ -22,8 +23,19 @@ const SubscriptionTile = ({ data }: Props) => {
         );
     });
 
+    const buttonClass = `inline-flex relative px-3 py-2 font-medium mt-auto border-2 rounded-md dark:border-white ${
+        data.popular
+            ? 'dark:text-gray-800 dark:bg-white dark:hover:bg-transparent dark:hover:text-white dark:shadow-[0px_0px_5px_0px_#FFF]'
+            : 'dark:text-white dark:bg-transparent dark:hover:bg-white dark:hover:text-gray-800'
+    }`;
+
     return (
         <div className='border-2 relative rounded-lg dark:border-gray-300 py-6 px-6 flex flex-col'>
+            {data.popular ? (
+                <span className='absolute -top-5 dark:text-gray-800 font-medium text-sm dark:bg-white px-3 py-2 rounded-full ml-auto mr-auto left-0 right-0 text-center max-w-max'>
+                    Most Popular
+                </span>
+            ) : null}
             <span className='block dark:text-white font-medium text-2xl font-logo'>
                 {data.name}
             </span>
@@ -45,8 +57,8 @@ const SubscriptionTile = ({ data }: Props) => {
                 {listItems}
             </ul>
 
-            <button className='inline-flex dark:text-white relative px-3 py-2 font-medium mt-auto border-2 rounded-md dark:border-white dark:bg-transparent dark:hover:bg-white dark:hover:text-gray-800'>
-                Explore
+            <button className={buttonClass}>
+                {data.popular ? 'Start a free trial' : 'Explore'}
                 <i className='right-3 bottom-1.5 text-xl absolute bi bi-arrow-right'></i>
             </button>
         </div>
