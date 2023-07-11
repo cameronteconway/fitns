@@ -1,0 +1,42 @@
+{
+    "subscriptions": [
+        {
+            "id": 1,
+            "name": "Free",
+            "price": 0,
+            "includes": [
+                "Basic Progression Tracking",
+                "Meal Plans",
+                "Access 5 Workouts"
+            ],
+            "summary": "Basic program for those who are looking for somewhere to start."
+        },
+        {
+            "id": 2,
+            "name": "Lite",
+            "price": 20,
+            "includes": [
+                "Progression Tracking",
+                "Meal Plans",
+                "Macro Tracking",
+                "Habit Coaching",
+                "Access All Workouts"
+            ],
+            "summary": "A program for those who are ready to upgrade their workouts and see results."
+        },
+        {
+            "id": 3,
+            "name": "Pro",
+            "price": 40,
+            "includes": [
+                "Progression Tracking",
+                "Meal Plans",
+                "Macro Tracking and Food Journal",
+                "Habit Coaching",
+                "Packaged Workout Programs",
+                "Real-Time Messaging Support"
+            ],
+            "summary": "The full package, a program tailored to you. Including extra support from our professionals when required."
+        }
+    ]
+}
