@@ -12,8 +12,6 @@ type Props = {
 };
 
 const SubscriptionTile = ({ data }: Props) => {
-    console.log(data);
-
     const listItems = data.includes.map((text, index) => {
         return (
             <li className='flex items-center space-x-3' key={index}>

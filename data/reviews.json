@@ -1,0 +1,36 @@
+{
+    "reviews": [
+        {
+            "id": 1,
+            "name": "Felicia Fernandez",
+            "email": "felicia.fernandez@example.com",
+            "summary": "I can't recommend enough!",
+            "review": "'FitNs' has helped me reach my fitness goals in such a short amount of time, meaning I don't have to sacrifice family time.",
+            "image": "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png"
+        },
+        {
+            "id": 2,
+            "name": "Sarah Marshall",
+            "email": "sarahmarshall1989@example.com",
+            "summary": "Great features to keep you motivated",
+            "review": "Tracking my progress really gives me the motivation to keep pushing in the workouts.",
+            "image": "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/roberta-casas.png"
+        },
+        {
+            "id": 3,
+            "name": "Daryl Long",
+            "email": "daryl.long@example.com",
+            "summary": "Engaging workouts",
+            "review": "I feel so good after each workout, I can't wait to try more!",
+            "image": "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png"
+        },
+        {
+            "id": 4,
+            "name": "Russell Cunningham",
+            "email": "russellcunningham@example.com",
+            "summary": "Super easy to use",
+            "review": "No time wasted finding the right meals to supplement my training, eveything I need in one place. I would recommend to anyone!",
+            "image": "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/joseph-mcfall.png"
+        }
+    ]
+}
