@@ -206,12 +206,3 @@ export const ShoppingCartProvider = ({
 };
 
 export default ShoppingCartContext;
-
-// https://www.youtube.com/watch?v=HQFeTj0dGBo&t=253s&ab_channel=DaveGray
-// https://vercel.com/pricing
-// https://www.digitalocean.com/pricing
-// https://www.trainerize.com/
-// https://everfit.io/
-
-// Most recent vid on complex container
-// https://www.youtube.com/watch?v=05ZM4ymK9Nc&ab_channel=DaveGray

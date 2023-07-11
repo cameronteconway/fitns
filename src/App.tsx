@@ -25,3 +25,12 @@ function App() {
 }
 
 export default App;
+
+// https://www.youtube.com/watch?v=6Qqb2GBGgGc&ab_channel=DaveGray
+// https://tailwindui.com/components/ecommerce/components/shopping-carts
+// https://flowbite.com/docs/components/card/
+// https://tailwinduikit.com/components/marketing/page_section/feature
+// https://everfit.io/
+// https://vercel.com/pricing
+// https://www.digitalocean.com/pricing - workout
+// https://www.trainerize.com/
