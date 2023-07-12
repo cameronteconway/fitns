@@ -38,24 +38,30 @@ const Workout = ({
         }
     );
 
-    const renderBodyPart = workout.bodyPart.map((bodyPart: string) => (
-        <li className='bg-gray-100 max-w-max mt-1 inline-block text-gray-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-500 dark:text-gray-100 border border-gray-600'>
-            {bodyPart}
-        </li>
-    ));
+    const renderBodyPart = workout.bodyPart.map(
+        (bodyPart: string, index: number) => (
+            <li
+                className='bg-gray-100 max-w-max mt-1 inline-block text-gray-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-500 dark:text-gray-100 border border-gray-600'
+                key={index}
+            >
+                {bodyPart}
+            </li>
+        )
+    );
 
-    const renderCategory = workout.category.map((category: string) => (
-        <li className='bg-gray-100 max-w-max mt-1 inline-block text-gray-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-500 dark:text-gray-100 border border-gray-600'>
-            {category}
-        </li>
-    ));
+    const renderCategory = workout.category.map(
+        (category: string, index: number) => (
+            <li
+                className='bg-gray-100 max-w-max mt-1 inline-block text-gray-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-500 dark:text-gray-100 border border-gray-600'
+                key={index}
+            >
+                {category}
+            </li>
+        )
+    );
 
     return (
-        <div
-            data-category={workout.category}
-            data-bodyPart={workout.bodyPart}
-            className='border-2 dark:bg-gray-800 relative rounded-lg dark:border-white py-7 px-6 flex flex-col shadow-[rgba(0,_0,_0,_0.25)_0px_0px_30px_-12px] dark:shadow-[rgba(255,_250,_250,_0.25)_0px_0px_40px_-12px]'
-        >
+        <div className='border-2 dark:bg-gray-800 relative rounded-lg border-gray-200 dark:border-white py-7 px-6 flex flex-col shadow-[rgba(0,_0,_0,_0.25)_0px_0px_30px_-12px] dark:shadow-[rgba(255,_250,_250,_0.25)_0px_0px_40px_-12px]'>
             {workout.popular ? (
                 <span className='absolute -top-5 dark:text-gray-800 font-medium text-sm border-2 text-white border-gray-900 bg-gray-900 dark:border-white dark:bg-white px-3 py-2 rounded-full ml-auto mr-auto left-0 right-0 text-center max-w-max'>
                     Popular
@@ -94,14 +100,14 @@ const Workout = ({
             {inCart ? (
                 <button
                     disabled
-                    className='inline-flex disabled:opacity-50 justify-center relative px-3 py-2 font-medium mt-auto border-2 rounded-md dark:border-white dark:text-white dark:bg-transparent'
+                    className='border-gray-300 inline-flex disabled:opacity-50 justify-center relative px-3 py-2 font-medium mt-auto border-2 rounded-md dark:border-white dark:text-white dark:bg-transparent'
                     onClick={onAddToShoppingCart}
                 >
                     Item already in cart
                 </button>
             ) : (
                 <button
-                    className='inline-flex relative px-3 py-2 font-medium mt-auto border-2 rounded-md dark:border-white hover:bg-gray-900 hover:text-white hover:border-gray-900 dark:text-white dark:bg-transparent dark:hover:bg-white dark:hover:text-gray-800 dark:hover:border-white'
+                    className='border-gray-300 inline-flex relative px-3 py-2 font-medium mt-auto border-2 rounded-md dark:border-white hover:bg-gray-900 hover:text-white hover:border-gray-900 dark:text-white dark:bg-transparent dark:hover:bg-white dark:hover:text-gray-800 dark:hover:border-white'
                     onClick={onAddToShoppingCart}
                 >
                     Add to cart

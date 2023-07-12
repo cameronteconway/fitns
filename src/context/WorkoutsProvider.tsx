@@ -68,7 +68,7 @@ const initState: WorkoutsType[] = [
         popular: false,
     },
     {
-        id: 3,
+        id: 4,
         name: 'Upper body 1',
         price: 10,
         includes: [
@@ -85,7 +85,7 @@ const initState: WorkoutsType[] = [
         popular: false,
     },
     {
-        id: 4,
+        id: 5,
         name: 'Upper Body 2',
         price: 10,
         includes: [
@@ -102,7 +102,7 @@ const initState: WorkoutsType[] = [
         popular: true,
     },
     {
-        id: 5,
+        id: 6,
         name: 'Core 1',
         price: 5,
         includes: [
@@ -117,7 +117,7 @@ const initState: WorkoutsType[] = [
         popular: false,
     },
     {
-        id: 6,
+        id: 7,
         name: 'Core 2',
         price: 5,
         includes: [
@@ -132,7 +132,7 @@ const initState: WorkoutsType[] = [
         popular: false,
     },
     {
-        id: 7,
+        id: 8,
         name: 'Core 3',
         price: 5,
         includes: [
@@ -147,7 +147,7 @@ const initState: WorkoutsType[] = [
         popular: false,
     },
     {
-        id: 8,
+        id: 9,
         name: 'Legs 1',
         price: 5,
         includes: [
@@ -162,7 +162,7 @@ const initState: WorkoutsType[] = [
         popular: true,
     },
     {
-        id: 9,
+        id: 10,
         name: 'Legs 2',
         price: 5,
         includes: [
@@ -177,7 +177,7 @@ const initState: WorkoutsType[] = [
         popular: false,
     },
     {
-        id: 10,
+        id: 11,
         name: 'Legs 3',
         price: 5,
         includes: [
@@ -192,7 +192,7 @@ const initState: WorkoutsType[] = [
         popular: false,
     },
     {
-        id: 11,
+        id: 12,
         name: 'Push 1',
         price: 5,
         includes: [
@@ -207,7 +207,7 @@ const initState: WorkoutsType[] = [
         popular: false,
     },
     {
-        id: 12,
+        id: 13,
         name: 'Push 2',
         price: 5,
         includes: [
@@ -222,7 +222,7 @@ const initState: WorkoutsType[] = [
         popular: false,
     },
     {
-        id: 13,
+        id: 14,
         name: 'Pull 1',
         price: 5,
         includes: [
@@ -237,7 +237,7 @@ const initState: WorkoutsType[] = [
         popular: false,
     },
     {
-        id: 14,
+        id: 15,
         name: 'Pull 2',
         price: 5,
         includes: [
@@ -252,7 +252,7 @@ const initState: WorkoutsType[] = [
         popular: false,
     },
     {
-        id: 15,
+        id: 16,
         name: 'Back 1',
         price: 2.5,
         includes: [
@@ -266,7 +266,7 @@ const initState: WorkoutsType[] = [
         popular: false,
     },
     {
-        id: 16,
+        id: 17,
         name: 'Back 2',
         price: 2.5,
         includes: [
@@ -280,7 +280,7 @@ const initState: WorkoutsType[] = [
         popular: false,
     },
     {
-        id: 17,
+        id: 18,
         name: 'Back 3',
         price: 2.5,
         includes: [
@@ -294,7 +294,7 @@ const initState: WorkoutsType[] = [
         popular: false,
     },
     {
-        id: 18,
+        id: 19,
         name: 'Arms 1',
         price: 2.5,
         includes: [
@@ -308,7 +308,7 @@ const initState: WorkoutsType[] = [
         popular: false,
     },
     {
-        id: 19,
+        id: 20,
         name: 'Arms 2',
         price: 2.5,
         includes: [
@@ -322,7 +322,7 @@ const initState: WorkoutsType[] = [
         popular: false,
     },
     {
-        id: 20,
+        id: 21,
         name: 'Arms 3',
         price: 2.5,
         includes: [
@@ -336,7 +336,7 @@ const initState: WorkoutsType[] = [
         popular: false,
     },
     {
-        id: 21,
+        id: 22,
         name: 'Chest 1',
         price: 2.5,
         includes: [
@@ -350,7 +350,7 @@ const initState: WorkoutsType[] = [
         popular: false,
     },
     {
-        id: 22,
+        id: 23,
         name: 'Chest 2',
         price: 2.5,
         includes: [
@@ -364,7 +364,7 @@ const initState: WorkoutsType[] = [
         popular: false,
     },
     {
-        id: 23,
+        id: 24,
         name: 'Chest 3',
         price: 2.5,
         includes: [
@@ -378,7 +378,7 @@ const initState: WorkoutsType[] = [
         popular: false,
     },
     {
-        id: 24,
+        id: 25,
         name: 'Shoulders 1',
         price: 2.5,
         includes: [
@@ -392,7 +392,7 @@ const initState: WorkoutsType[] = [
         popular: false,
     },
     {
-        id: 25,
+        id: 26,
         name: 'Shoulders 2',
         price: 2.5,
         includes: [
@@ -406,7 +406,7 @@ const initState: WorkoutsType[] = [
         popular: false,
     },
     {
-        id: 26,
+        id: 27,
         name: 'Shoulders 3',
         price: 2.5,
         includes: [
