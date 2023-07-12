@@ -2,7 +2,7 @@ import data from '../../data/subscriptions.json';
 
 import SubscriptionTile from './SubscriptionTile';
 
-type Subscription = {
+type SubscriptionType = {
     id: number;
     name: string;
     price: number | string;
@@ -13,7 +13,7 @@ type Subscription = {
 
 const Subscriptions = () => {
     const subscriptionTiles: JSX.Element | JSX.Element[] =
-        data.subscriptions.map((sub: Subscription) => (
+        data.subscriptions.map((sub: SubscriptionType) => (
             <SubscriptionTile key={sub.id} data={sub} />
         ));
 

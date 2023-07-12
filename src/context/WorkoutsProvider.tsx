@@ -4,7 +4,7 @@ import { createContext, ReactElement, useState } from 'react';
 export type WorkoutsType = {
     id: number;
     name: string;
-    price: number | string;
+    price: number;
     includes: string[];
     summary: string;
     bodyPart: string[];
@@ -18,13 +18,13 @@ const initState: WorkoutsType[] = [
         name: 'Full Body 1',
         price: 15,
         includes: [
-            'Bench press – 3 sets of 5-8 reps',
-            'Lat pull-down – 3 sets of 10-15 reps',
-            'Squats – 3 sets of 5-8 reps',
-            'Leg curl – 3 sets of 10-15 reps',
-            'Dumbbell shoulder press – 2 sets of 5-8 reps',
-            'Incline curl – 2 sets of 10-15 reps',
-            'Triceps press-down – 2 sets of 10-15 reps',
+            'Bench press - 3 sets of 5-8 reps',
+            'Lat pull-down - 3 sets of 10-15 reps',
+            'Squats - 3 sets of 5-8 reps',
+            'Leg curl - 3 sets of 10-15 reps',
+            'Dumbbell shoulder press - 2 sets of 5-8 reps',
+            'Incline curl - 2 sets of 10-15 reps',
+            'Triceps press-down - 2 sets of 10-15 reps',
         ],
         summary: 'Effective way to target all muscle groups.',
         bodyPart: ['general', 'full-body'],
@@ -36,13 +36,13 @@ const initState: WorkoutsType[] = [
         name: 'Full Body 2',
         price: 15,
         includes: [
-            'Incline dumbbell press – 3 sets of 10-15 reps',
-            'Seated cable row – 3 sets of 10-15 reps',
-            'Leg press – 3 sets of 10-15 reps',
-            'Romanian deadlift – 3 sets of 10-15 reps',
-            'Lateral raise – 2 sets of 15-20 reps',
-            'Dumbbell hammer curl – 2 sets of 10-15 reps',
-            'Overhead triceps extension – 2 sets of 10-15 reps',
+            'Incline dumbbell press - 3 sets of 10-15 reps',
+            'Seated cable row - 3 sets of 10-15 reps',
+            'Leg press - 3 sets of 10-15 reps',
+            'Romanian deadlift - 3 sets of 10-15 reps',
+            'Lateral raise - 2 sets of 15-20 reps',
+            'Dumbbell hammer curl - 2 sets of 10-15 reps',
+            'Overhead triceps extension - 2 sets of 10-15 reps',
         ],
         summary: 'Effective way to target all muscle groups.',
         bodyPart: ['general', 'full-body'],
@@ -54,13 +54,13 @@ const initState: WorkoutsType[] = [
         name: 'Full Body 3',
         price: 15,
         includes: [
-            'Cable crossover – 3 sets of 15-20 reps',
-            'Dumbbell row – 3 sets of 5-8 reps',
-            'Leg extension – 3 sets of 15-20 reps',
-            'Leg curl – 3 sets of 15-20 reps',
-            'Bent over lateral raise – 2 sets of 10-15 reps',
-            'Preacher curl – 2 sets of 10-15 reps',
-            'Lying triceps extension – 2 sets of 10-15 reps',
+            'Cable crossover - 3 sets of 15-20 reps',
+            'Dumbbell row - 3 sets of 5-8 reps',
+            'Leg extension - 3 sets of 15-20 reps',
+            'Leg curl - 3 sets of 15-20 reps',
+            'Bent over lateral raise - 2 sets of 10-15 reps',
+            'Preacher curl - 2 sets of 10-15 reps',
+            'Lying triceps extension - 2 sets of 10-15 reps',
         ],
         summary: 'Effective way to target all muscle groups.',
         bodyPart: ['general', 'full-body'],
@@ -74,8 +74,8 @@ const initState: WorkoutsType[] = [
         includes: [
             'Dumbell chest press - 3 sets of 10-12 reps',
             'Dumbell shoulder press - 3 sets of 10-12 reps',
-            'Lat pull-down – 3 sets of 10-15 reps',
-            'Seated cable row – 3 sets of 10-15 reps',
+            'Lat pull-down - 3 sets of 10-15 reps',
+            'Seated cable row - 3 sets of 10-15 reps',
             'Cable biceps curl - 3 sets of 10-12 reps',
             'Cable triceps push-down - 3 sets of 10-12 reps',
         ],
@@ -89,10 +89,10 @@ const initState: WorkoutsType[] = [
         name: 'Upper Body 2',
         price: 10,
         includes: [
-            'Bench press – 3 sets of 5-8 reps',
-            'Seated cable row – 3 sets of 10-15 reps',
-            'Incline dumbbell press – 3 sets of 10-12 reps',
-            'Lateral raise – 2 sets of 15-20 reps',
+            'Bench press - 3 sets of 5-8 reps',
+            'Seated cable row - 3 sets of 10-15 reps',
+            'Incline dumbbell press - 3 sets of 10-12 reps',
+            'Lateral raise - 2 sets of 15-20 reps',
             'Skull crushers - 3 sets of 10-15 reps',
             'Dumbbell curls - 3 sets of 10-15 reps',
         ],
@@ -167,7 +167,7 @@ const initState: WorkoutsType[] = [
         price: 5,
         includes: [
             'Back squat - 3 sets of 10-12 reps',
-            'Romanian deadlift – 3 sets of 10-15 reps',
+            'Romanian deadlift - 3 sets of 10-15 reps',
             'Reverse lunge - 3 sets of 10-12 reps',
             'Standing calf raise  - 3 sets of 12-15 reps',
         ],
@@ -196,8 +196,8 @@ const initState: WorkoutsType[] = [
         name: 'Push 1',
         price: 5,
         includes: [
-            'Bench press – 3 sets of 5-8 reps',
-            'Incline dumbbell press – 3 sets of 10-12 reps',
+            'Bench press - 3 sets of 5-8 reps',
+            'Incline dumbbell press - 3 sets of 10-12 reps',
             'Dumbbell chest fly - 3 sets of 8-10 reps',
             'Push-ups - 3 sets of 20-25',
         ],
@@ -241,8 +241,8 @@ const initState: WorkoutsType[] = [
         name: 'Pull 2',
         price: 5,
         includes: [
-            'Lat pull-down – 3 sets of 10-15 reps',
-            'Dumbbell row – 3 sets of 5-8 reps',
+            'Lat pull-down - 3 sets of 10-15 reps',
+            'Dumbbell row - 3 sets of 5-8 reps',
             'Dumbbell shrugs - 3 sets of 12-15 reps',
             'Barbell bicep curls - 3 sets of 10-12 reps',
         ],
@@ -256,9 +256,9 @@ const initState: WorkoutsType[] = [
         name: 'Back 1',
         price: 2.5,
         includes: [
-            'Romanian deadlift – 3 sets of 10-15 reps',
+            'Romanian deadlift - 3 sets of 10-15 reps',
             'T-bar row - 3 sets of 10-12 reps',
-            'Lat pull-down – 3 sets of 10-15 reps',
+            'Lat pull-down - 3 sets of 10-15 reps',
         ],
         summary: 'Effective way to target your back.',
         bodyPart: ['back'],
@@ -298,7 +298,7 @@ const initState: WorkoutsType[] = [
         name: 'Arms 1',
         price: 2.5,
         includes: [
-            'Dumbbell hammer curl – 2 sets of 10-15 reps',
+            'Dumbbell hammer curl - 2 sets of 10-15 reps',
             'Pull-ups - 3 sets of 5-10 reps',
             'EZ-bar preacher curl - 3 sets of 8-10 reps',
         ],
@@ -313,7 +313,7 @@ const initState: WorkoutsType[] = [
         price: 2.5,
         includes: [
             'Dips - 2 sets of 8-12 reps',
-            'Triceps press-down – 2 sets of 10-15 reps',
+            'Triceps press-down - 2 sets of 10-15 reps',
             'Wide-grip curls - 3 sets of 8-10 reps',
         ],
         summary: 'Effective way to target your arms.',
@@ -327,7 +327,7 @@ const initState: WorkoutsType[] = [
         price: 2.5,
         includes: [
             'Close-grip curl - 3 sets of 8-10 reps',
-            'Incline curl – 2 sets of 10-15 reps',
+            'Incline curl - 2 sets of 10-15 reps',
             'Dumbbell pull-over - 3 sets of 8-12 reps',
         ],
         summary: 'Effective way to target your arms.',
@@ -340,7 +340,7 @@ const initState: WorkoutsType[] = [
         name: 'Chest 1',
         price: 2.5,
         includes: [
-            'Barbell bench press – 3 sets of 5-8 reps',
+            'Barbell bench press - 3 sets of 5-8 reps',
             'Decline press - 3 sets of 8-10 reps',
             'Push-ups - 3 sets of 20-25',
         ],
@@ -368,7 +368,7 @@ const initState: WorkoutsType[] = [
         name: 'Chest 3',
         price: 2.5,
         includes: [
-            'Incline dumbbell press – 3 sets of 10-12 reps',
+            'Incline dumbbell press - 3 sets of 10-12 reps',
             'Machine chest press - 3 sets of 12-15 reps',
             'Dumbbell pull-over - 3 sets of 8-12 reps',
         ],

@@ -23,7 +23,7 @@ const Reviews = () => {
                 </blockquote>
                 <figcaption className='flex items-center justify-center space-x-3'>
                     <img
-                        className='rounded-full w-9 h-9'
+                        className='rounded-full w-10 h-10 ring-2 ring-gray-300 dark:ring-gray-500 p-1'
                         src={review.image}
                         alt='profile picture'
                     />
