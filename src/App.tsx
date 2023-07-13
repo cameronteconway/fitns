@@ -26,7 +26,7 @@ function App() {
 
 export default App;
 
-// https://www.youtube.com/watch?v=6Qqb2GBGgGc&ab_channel=DaveGray
+// https://youtu.be/6Qqb2GBGgGc?t=2362
 // https://tailwindui.com/components/ecommerce/components/shopping-carts
 // https://flowbite.com/docs/components/card/
 // https://tailwinduikit.com/components/marketing/page_section/feature

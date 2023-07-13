@@ -1,10 +1,11 @@
 import useShoppingCart from '../hooks/useShoppingCart';
 import useWorkout from '../hooks/useWorkouts';
+import { useState } from 'react';
 import { capitalizeFirstLetter } from '../util/utils';
 import { WorkoutsType } from '../context/WorkoutsProvider';
 
 import Workout from '../components/Workout';
-import { useState } from 'react';
+import Pagination from '../components/Pagination';
 
 const Workouts = () => {
     const [bodyPart, setBodyPart] = useState('All');
@@ -40,7 +41,7 @@ const Workouts = () => {
             workout.category.includes(filterString)
         );
 
-    let renderWorkouts;
+    let renderWorkouts!: JSX.Element[];
     const bodyPartArray: string[] = [];
     const categoryArray: string[] = [];
     if (workouts?.length) {
@@ -81,6 +82,7 @@ const Workouts = () => {
         });
     }
 
+    // Filter handle
     const handleBodyPartSelection = (
         e: React.ChangeEvent<HTMLSelectElement>
     ) => {
@@ -105,6 +107,46 @@ const Workouts = () => {
         </option>
     ));
 
+    // renderWorkouts
+
+    // Pagination
+    const [currentPage, setCurrentPage] = useState(1);
+    const workoutsPerPage = 6;
+    const totalWorkouts = renderWorkouts.length;
+
+    const indexOfLastPost = currentPage * workoutsPerPage;
+    const indexOfFirstPost = indexOfLastPost - workoutsPerPage;
+    const currentPosts = renderWorkouts.slice(
+        indexOfFirstPost,
+        indexOfLastPost
+    );
+
+    // Rendered workouts split into 6
+    const seperatedRenderedWorkouts = [];
+    for (let i = 0; i < renderWorkouts.length; i += workoutsPerPage) {
+        seperatedRenderedWorkouts.push(
+            renderWorkouts.slice(i, i + workoutsPerPage)
+        );
+    }
+
+    const paginate = (pageNumber: number) => {
+        setCurrentPage(pageNumber);
+    };
+
+    const previousPage = () => {
+        if (currentPage !== 1) {
+            setCurrentPage(currentPage - 1);
+        }
+    };
+
+    const nextPage = () => {
+        if (
+            currentPage !== Math.ceil(renderWorkouts.length / workoutsPerPage)
+        ) {
+            setCurrentPage(currentPage + 1);
+        }
+    };
+
     return (
         <div className='py-10'>
             <span className='block text-center pb-12 dark:text-white text-5xl md:text-6xl font-medium'>
@@ -121,6 +163,7 @@ const Workouts = () => {
                     <select
                         id='filterBodyPart'
                         className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
+                        style={{ appearance: 'none' }}
                         value={bodyPart}
                         onChange={handleBodyPartSelection}
                     >
@@ -148,8 +191,15 @@ const Workouts = () => {
                 </form>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-3 md:gap-x-4 lg:gap-x-8 gap-y-8'>
-                {renderWorkouts}
+                {seperatedRenderedWorkouts[currentPage - 1]}
             </div>
+            <Pagination
+                totalWorkouts={totalWorkouts}
+                workoutsPerPage={workoutsPerPage}
+                paginate={paginate}
+                previousPage={previousPage}
+                nextPage={nextPage}
+            />
         </div>
     );
 };
