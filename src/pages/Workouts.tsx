@@ -10,6 +10,8 @@ import Pagination from '../components/Pagination';
 const Workouts = () => {
     const [bodyPart, setBodyPart] = useState('All');
     const [category, setCategory] = useState('All');
+    const [currentPage, setCurrentPage] = useState(1);
+    const workoutsPerPage = 6;
     const { dispatch, REDUCER_ACTIONS, shoppingCart } = useShoppingCart();
     const { workouts } = useWorkout();
 
@@ -87,6 +89,8 @@ const Workouts = () => {
         e: React.ChangeEvent<HTMLSelectElement>
     ) => {
         setBodyPart(e.target.value);
+        // Rest the current page to view the bodyPart change from the beginning
+        setCurrentPage(1);
     };
 
     const renderBodyPartSelection = bodyPartArray.map((bodyPart, index) => (
@@ -99,6 +103,8 @@ const Workouts = () => {
         e: React.ChangeEvent<HTMLSelectElement>
     ) => {
         setCategory(e.target.value);
+        // Rest the current page to view the category change from the beginning
+        setCurrentPage(1);
     };
 
     const renderCategorySelection = categoryArray.map((category, index) => (
@@ -107,19 +113,8 @@ const Workouts = () => {
         </option>
     ));
 
-    // renderWorkouts
-
     // Pagination
-    const [currentPage, setCurrentPage] = useState(1);
-    const workoutsPerPage = 6;
     const totalWorkouts = renderWorkouts.length;
-
-    const indexOfLastPost = currentPage * workoutsPerPage;
-    const indexOfFirstPost = indexOfLastPost - workoutsPerPage;
-    const currentPosts = renderWorkouts.slice(
-        indexOfFirstPost,
-        indexOfLastPost
-    );
 
     // Rendered workouts split into 6
     const seperatedRenderedWorkouts = [];
@@ -128,10 +123,6 @@ const Workouts = () => {
             renderWorkouts.slice(i, i + workoutsPerPage)
         );
     }
-
-    const paginate = (pageNumber: number) => {
-        setCurrentPage(pageNumber);
-    };
 
     const previousPage = () => {
         if (currentPage !== 1) {
@@ -196,9 +187,10 @@ const Workouts = () => {
             <Pagination
                 totalWorkouts={totalWorkouts}
                 workoutsPerPage={workoutsPerPage}
-                paginate={paginate}
                 previousPage={previousPage}
                 nextPage={nextPage}
+                seperatedRenderedWorkouts={seperatedRenderedWorkouts}
+                currentPage={currentPage}
             />
         </div>
     );

@@ -1,37 +1,63 @@
 type PropsType = {
     totalWorkouts: number;
     workoutsPerPage: number;
-    paginate: (pageNumber: number) => void;
     previousPage: () => void;
     nextPage: () => void;
+    seperatedRenderedWorkouts: JSX.Element[][];
+    currentPage: number;
 };
 
 const Pagination = ({
     totalWorkouts,
     workoutsPerPage,
-    paginate,
     previousPage,
     nextPage,
+    seperatedRenderedWorkouts,
+    currentPage,
 }: PropsType) => {
-    // let toShow;
-    // if(work)
+    // Pagination logic
+    let toShow: number;
+    let firstShown: number;
 
-    const pageNumbers = [];
-
-    for (let i = 1; i <= Math.ceil(totalWorkouts / workoutsPerPage); i++) {
-        pageNumbers.push(i);
+    if (seperatedRenderedWorkouts[currentPage - 1].length < workoutsPerPage) {
+        const totalSeen = (currentPage - 1) * 6;
+        toShow = totalWorkouts;
+        firstShown = totalSeen + 1;
+    } else {
+        if (seperatedRenderedWorkouts[currentPage - 1].length !== 6) {
+            const totalSeen = (currentPage - 1) * 6;
+            toShow =
+                totalSeen + seperatedRenderedWorkouts[currentPage - 1].length;
+            firstShown = totalSeen + 1;
+        } else {
+            const totalSeen = (currentPage - 1) * 6;
+            toShow =
+                totalSeen + seperatedRenderedWorkouts[currentPage - 1].length;
+            firstShown = totalSeen + 1;
+        }
     }
+
+    const buttonClassPrev = `flex items-center justify-center px-4 h-10 text-base font-medium text-white bg-gray-800 rounded-l hover:bg-gray-900 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white ${
+        currentPage == 1
+            ? 'opacity-25 pointer-events-none focus:outline-none'
+            : null
+    }`;
+    const buttonClassNext = `flex items-center justify-center px-4 h-10 text-base font-medium text-white bg-gray-800 border-0 border-l border-gray-700 rounded-r hover:bg-gray-900 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white ${
+        seperatedRenderedWorkouts.length == currentPage
+            ? 'opacity-25 pointer-events-none focus:outline-none'
+            : null
+    }`;
 
     return (
         <div className='flex flex-col mt-8 items-center'>
             <span className='text-sm text-gray-700 dark:text-gray-400'>
                 Showing{' '}
                 <span className='font-semibold text-gray-900 dark:text-white'>
-                    1
+                    {firstShown}
                 </span>{' '}
                 to{' '}
                 <span className='font-semibold text-gray-900 dark:text-white'>
-                    6
+                    {toShow}
                 </span>{' '}
                 of{' '}
                 <span className='font-semibold text-gray-900 dark:text-white'>
@@ -42,7 +68,8 @@ const Pagination = ({
             <div className='inline-flex mt-2 xs:mt-0'>
                 <button
                     onClick={previousPage}
-                    className='flex items-center justify-center px-4 h-10 text-base font-medium text-white bg-gray-800 rounded-l hover:bg-gray-900 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white'
+                    className={buttonClassPrev}
+                    tabIndex={currentPage == 1 ? '-1' : '0'}
                 >
                     <svg
                         className='w-3.5 h-3.5 mr-2'
@@ -63,7 +90,12 @@ const Pagination = ({
                 </button>
                 <button
                     onClick={nextPage}
-                    className='flex items-center justify-center px-4 h-10 text-base font-medium text-white bg-gray-800 border-0 border-l border-gray-700 rounded-r hover:bg-gray-900 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white'
+                    className={buttonClassNext}
+                    tabIndex={
+                        seperatedRenderedWorkouts.length == currentPage
+                            ? '-1'
+                            : '0'
+                    }
                 >
                     Next
                     <svg
