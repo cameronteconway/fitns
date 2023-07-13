@@ -37,12 +37,12 @@ const Pagination = ({
         }
     }
 
-    const buttonClassPrev = `flex items-center justify-center px-4 h-10 text-base font-medium text-white bg-gray-800 rounded-l hover:bg-gray-900 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white ${
+    const buttonClassPrev = `flex bg-white text-gray-900 items-center justify-center px-4 h-10 text-base font-medium bg-gray-800 rounded-l hover:bg-gray-200 focus:bg-gray-200 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white ${
         currentPage == 1
             ? 'opacity-25 pointer-events-none focus:outline-none'
             : null
     }`;
-    const buttonClassNext = `flex items-center justify-center px-4 h-10 text-base font-medium text-white bg-gray-800 border-0 border-l border-gray-700 rounded-r hover:bg-gray-900 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white ${
+    const buttonClassNext = `flex bg-white text-gray-900 items-center justify-center px-4 h-10 text-base font-medium bg-gray-800 border-l hover:bg-gray-200 focus:bg-gray-200 border-0 border-gray-700 rounded-r dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white ${
         seperatedRenderedWorkouts.length == currentPage
             ? 'opacity-25 pointer-events-none focus:outline-none'
             : null
@@ -69,7 +69,7 @@ const Pagination = ({
                 <button
                     onClick={previousPage}
                     className={buttonClassPrev}
-                    tabIndex={currentPage == 1 ? '-1' : '0'}
+                    tabIndex={currentPage == 1 ? -1 : 0}
                 >
                     <svg
                         className='w-3.5 h-3.5 mr-2'
@@ -92,9 +92,7 @@ const Pagination = ({
                     onClick={nextPage}
                     className={buttonClassNext}
                     tabIndex={
-                        seperatedRenderedWorkouts.length == currentPage
-                            ? '-1'
-                            : '0'
+                        seperatedRenderedWorkouts.length == currentPage ? -1 : 0
                     }
                 >
                     Next

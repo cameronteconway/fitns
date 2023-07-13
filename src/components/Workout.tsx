@@ -101,7 +101,6 @@ const Workout = ({
                 <button
                     disabled
                     className='border-gray-300 inline-flex disabled:opacity-50 justify-center relative px-3 py-2 font-medium mt-auto border-2 rounded-md dark:border-white dark:text-white dark:bg-transparent'
-                    onClick={onAddToShoppingCart}
                 >
                     Item already in cart
                 </button>

@@ -6,9 +6,6 @@ export type ShoppingCartItemType = {
     price: number;
     includes: string[];
     summary: string;
-    bodyPart: string[];
-    category: string[];
-    popular: boolean;
     quantity: number;
 };
 
@@ -46,16 +43,7 @@ const reducer = (
             if (!action.payload) {
                 throw new Error('action.payload missing in ADD action');
             }
-            const {
-                id,
-                name,
-                price,
-                includes,
-                summary,
-                bodyPart,
-                category,
-                popular,
-            } = action.payload;
+            const { id, name, price, includes, summary } = action.payload;
             // Get all other items, except the item that is being added
             const filteredShoppingCart: ShoppingCartItemType[] =
                 state.shoppingCart.filter((item) => item.id !== id);
@@ -74,9 +62,6 @@ const reducer = (
                         price,
                         includes,
                         summary,
-                        bodyPart,
-                        category,
-                        popular,
                         quantity,
                     },
                 ],

@@ -143,8 +143,8 @@ const Workouts = () => {
             <span className='block text-center pb-12 dark:text-white text-5xl md:text-6xl font-medium'>
                 Our workout catalogue.
             </span>
-            <div className='grid grid-cols-1 md:grid-cols-3 mb-10 md:gap-x-4 lg:gap-x-8 gap-y-8'>
-                <form>
+            <div className='grid grid-cols-1 md:grid-cols-3 mb-10 md:gap-x-4 lg:gap-x-8 gap-y-4'>
+                <form className='relative'>
                     <label
                         className='block mb-2 text-sm font-medium text-gray-900 dark:text-white'
                         htmlFor='filterBodyPart'
@@ -153,7 +153,7 @@ const Workouts = () => {
                     </label>
                     <select
                         id='filterBodyPart'
-                        className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
+                        className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-2.5 px-4 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
                         style={{ appearance: 'none' }}
                         value={bodyPart}
                         onChange={handleBodyPartSelection}
@@ -161,9 +161,10 @@ const Workouts = () => {
                         <option value='All'>All</option>
                         {renderBodyPartSelection}
                     </select>
+                    <i className='absolute right-4 top-[35px] text-gray-800 dark:text-white bi bi-chevron-down text-xl'></i>
                 </form>
 
-                <form>
+                <form className='relative'>
                     <label
                         className='block mb-2 text-sm font-medium text-gray-900 dark:text-white'
                         htmlFor='filterCategory'
@@ -172,13 +173,15 @@ const Workouts = () => {
                     </label>
                     <select
                         id='filterCategory'
-                        className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
+                        className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-2.5 px-4 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
+                        style={{ appearance: 'none' }}
                         value={category}
                         onChange={handleCategorySelection}
                     >
                         <option value='All'>All</option>
                         {renderCategorySelection}
                     </select>
+                    <i className='absolute right-4 top-[35px] text-gray-800 dark:text-white bi bi-chevron-down text-xl'></i>
                 </form>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-3 md:gap-x-4 lg:gap-x-8 gap-y-8'>
