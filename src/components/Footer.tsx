@@ -9,18 +9,20 @@ const Footer = ({ setViewHome }: PropsType) => {
     const [footerClass, setFooterClass] = useState('');
 
     // If root height is less than window height, use styles to put footer at the bottom of the page
-    const root = document.getElementById('root');
+    const root = document.querySelector('main');
     let rootHeight: number | undefined;
     let windowHeight: number;
     useEffect(() => {
         rootHeight = root?.clientHeight;
         windowHeight = window.innerHeight;
 
-        if (rootHeight) {
-            if (rootHeight < windowHeight) {
-                setFooterClass('absolute bottom-0 w-full');
-            } else {
-                setFooterClass('');
+        if (window.innerWidth > 800) {
+            if (rootHeight) {
+                if (rootHeight < windowHeight) {
+                    setFooterClass('absolute bottom-0 w-full');
+                } else {
+                    setFooterClass('');
+                }
             }
         }
     });

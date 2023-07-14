@@ -1,4 +1,7 @@
-https://betterme.world/articles/3-day-full-body-workout/
-https://www.youtube.com/watch?v=RZPAQV7JvNU&ab_channel=LamaDev - Reducers
-https://www.youtube.com/watch?v=THL1OPn72vo&ab_channel=WebDevSimplified - useMemo
-https://www.youtube.com/watch?v=26ogBZXeBwc&ab_channel=DaveGray - useReducer
+# fitns - designed and developed by Cameron Conway
+
+The focus of this project was to design and build a modern online store application with a clean and user friendly interface. I have dealt with state using the Context API.
+
+## Technologies
+
+The project is built using the frontend JavaScript library [React](https://reactjs.org/) along with TypeScript, styling is dealt with using [TailwindCSS](https://tailwindcss.com/).

@@ -41,7 +41,7 @@ function App() {
     viewShoppingCart ? (pageContent = <ShoppingCart />) : null;
 
     return (
-        <>
+        <div className='dark:bg-gray-800 min-h-screen'>
             <Header
                 setViewHome={handleViewHome}
                 setViewWorkouts={handleViewWorkouts}
@@ -49,15 +49,8 @@ function App() {
             />
             <Layout>{pageContent}</Layout>
             <Footer setViewHome={handleViewHome} />
-        </>
+        </div>
     );
 }
 
 export default App;
-
-// https://flowbite.com/docs/components/card/
-// https://tailwinduikit.com/components/marketing/page_section/feature
-// https://everfit.io/
-// https://vercel.com/pricing
-// https://www.digitalocean.com/pricing - workout
-// https://www.trainerize.com/
