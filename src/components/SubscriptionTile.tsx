@@ -55,7 +55,7 @@ const SubscriptionTile = ({ data }: Props) => {
                 {listItems}
             </ul>
 
-            <button className={buttonClass}>
+            <button type='button' className={buttonClass}>
                 {data.popular ? 'Start a free trial' : 'Explore'}
                 <i className='right-3 bottom-1.5 text-xl absolute bi bi-arrow-right'></i>
             </button>

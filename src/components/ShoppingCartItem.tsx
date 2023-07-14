@@ -33,6 +33,7 @@ const ShoppingCartItem = ({ item, dispatch, REDUCER_ACTIONS }: PropsType) => {
                     {item.summary}
                 </p>
                 <button
+                    type='button'
                     onClick={removeShoppingCartItem}
                     className='block text-base font-semibold text-gray-900 dark:text-white'
                 >

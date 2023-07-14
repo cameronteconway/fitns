@@ -67,6 +67,7 @@ const Pagination = ({
             </span>
             <div className='inline-flex mt-2 xs:mt-0'>
                 <button
+                    type='button'
                     onClick={previousPage}
                     className={buttonClassPrev}
                     tabIndex={currentPage == 1 ? -1 : 0}
@@ -89,6 +90,7 @@ const Pagination = ({
                     Prev
                 </button>
                 <button
+                    type='button'
                     onClick={nextPage}
                     className={buttonClassNext}
                     tabIndex={

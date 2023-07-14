@@ -3,7 +3,7 @@ import {
     ReducerAction,
     ReducerActionType,
 } from '../context/ShoppingCartProvider';
-import { ReactElement, useState } from 'react';
+import { ReactElement } from 'react';
 
 type PropsType = {
     workout: WorkoutsType;
@@ -99,6 +99,7 @@ const Workout = ({
 
             {inCart ? (
                 <button
+                    type='button'
                     disabled
                     className='border-gray-300 inline-flex disabled:opacity-50 justify-center relative px-3 py-2 font-medium mt-auto border-2 rounded-md dark:border-white dark:text-white dark:bg-transparent'
                 >
@@ -106,6 +107,7 @@ const Workout = ({
                 </button>
             ) : (
                 <button
+                    type='button'
                     className='border-gray-300 inline-flex relative px-3 py-2 font-medium mt-auto border-2 rounded-md dark:border-white hover:bg-gray-900 hover:text-white hover:border-gray-900 dark:text-white dark:bg-transparent dark:hover:bg-white dark:hover:text-gray-800 dark:hover:border-white'
                     onClick={onAddToShoppingCart}
                 >

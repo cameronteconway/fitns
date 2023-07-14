@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import ShoppingCart from './pages/ShoppingCart';
 import Workouts from './pages/Workouts';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
     const [viewHome, setViewHome] = useState<boolean>(true);
@@ -15,22 +16,27 @@ function App() {
         setViewHome(true);
         setViewWorkouts(false);
         setViewShoppingCart(false);
+        window.scrollTo(0, 0);
     };
 
     const handleViewWorkouts = () => {
         setViewHome(false);
         setViewWorkouts(true);
         setViewShoppingCart(false);
+        window.scrollTo(0, 0);
     };
 
     const handleViewShoppingCards = () => {
         setViewHome(false);
         setViewWorkouts(false);
         setViewShoppingCart(true);
+        window.scrollTo(0, 0);
     };
 
     let pageContent;
-    viewHome ? (pageContent = <Home />) : null;
+    viewHome
+        ? (pageContent = <Home setViewWorkouts={handleViewWorkouts} />)
+        : null;
     viewWorkouts ? (pageContent = <Workouts />) : null;
     viewShoppingCart ? (pageContent = <ShoppingCart />) : null;
 
@@ -42,14 +48,13 @@ function App() {
                 setViewShoppingCart={handleViewShoppingCards}
             />
             <Layout>{pageContent}</Layout>
+            <Footer setViewHome={handleViewHome} />
         </>
     );
 }
 
 export default App;
 
-// https://youtu.be/6Qqb2GBGgGc?t=2362
-// https://tailwindui.com/components/ecommerce/components/shopping-carts
 // https://flowbite.com/docs/components/card/
 // https://tailwinduikit.com/components/marketing/page_section/feature
 // https://everfit.io/
