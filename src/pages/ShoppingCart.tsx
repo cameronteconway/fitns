@@ -6,7 +6,7 @@ import ShoppingCartItem from '../components/ShoppingCartItem';
 
 const ShoppingCart = () => {
     const [submitted, setSubmitted] = useState<boolean>(false);
-    const { dispatch, REDUCER_ACTIONS, totalItems, totalPrice, shoppingCart } =
+    const { dispatch, REDUCER_ACTIONS, totalPrice, shoppingCart } =
         useShoppingCart();
 
     const onSubmitOrder = () => {

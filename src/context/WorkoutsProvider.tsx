@@ -429,7 +429,7 @@ const WorkoutsContext = createContext<UseWorkoutsContextType>(initContextState);
 type ChildrenType = { children?: ReactElement | ReactElement[] };
 
 export const WorkoutsProvider = ({ children }: ChildrenType): ReactElement => {
-    const [workouts, setWorkouts] = useState<WorkoutsType[]>(initState);
+    const [workouts] = useState<WorkoutsType[]>(initState);
 
     return (
         <WorkoutsContext.Provider value={{ workouts }}>
