@@ -20,7 +20,7 @@ const PopularWorkout = ({ workout }: PropsType) => {
     );
 
     return (
-        <div className='border-2 dark:bg-gray-800 relative rounded-lg border-gray-200 dark:border-white py-7 px-6 flex flex-col shadow-[rgba(0,_0,_0,_0.25)_0px_0px_30px_-12px] dark:shadow-[rgba(255,_250,_250,_0.25)_0px_0px_40px_-12px]'>
+        <div className='border-2 dark:bg-gray-800 relative rounded-lg border-gray-200 dark:border-white py-7 px-6 flex flex-col shadow-[rgba(0,_0,_0,_0.25)_0px_0px_30px_-12px] dark:shadow-[rgba(255,_250,_250,_0.25)_0px_0px_30px_-12px]'>
             <span className='block dark:text-white font-bold text-2xl mb-2'>
                 {workout.name}
             </span>

@@ -14,8 +14,6 @@ const ShoppingCart = () => {
         setSubmitted(true);
     };
 
-    console.log(totalPrice);
-
     const renderShoppingCartList = shoppingCart.map((item) => (
         <ShoppingCartItem
             key={item.id}

@@ -18,6 +18,7 @@ const Reviews = () => {
             if (ratedStarsArray.includes(i)) {
                 starsArray.push(
                     <svg
+                        key={i}
                         className='w-4 h-4 text-yellow-300 mr-1'
                         aria-hidden='true'
                         xmlns='http://www.w3.org/2000/svg'
@@ -30,6 +31,7 @@ const Reviews = () => {
             } else {
                 starsArray.push(
                     <svg
+                        key={i}
                         className='w-4 h-4 text-gray-300 mr-1 dark:text-gray-500'
                         aria-hidden='true'
                         xmlns='http://www.w3.org/2000/svg'
