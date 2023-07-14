@@ -3,7 +3,7 @@ import {
     ReducerAction,
     ReducerActionType,
 } from '../context/ShoppingCartProvider';
-import { ReactElement } from 'react';
+import { ReactElement, useState } from 'react';
 
 type PropsType = {
     workout: WorkoutsType;
