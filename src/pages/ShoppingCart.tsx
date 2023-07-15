@@ -27,7 +27,7 @@ const ShoppingCart = () => {
 
     !submitted
         ? (content = (
-              <div className='py-10'>
+              <div className='py-10 '>
                   <span className='block text-center pb-12 dark:text-white text-5xl md:text-6xl font-medium'>
                       Shopping Cart.
                   </span>

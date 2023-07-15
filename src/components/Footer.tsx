@@ -3,9 +3,10 @@ import { useEffect, useState } from 'react';
 
 type PropsType = {
     setViewHome: () => void;
+    viewShoppingCart: boolean;
 };
 
-const Footer = ({ setViewHome }: PropsType) => {
+const Footer = ({ setViewHome, viewShoppingCart }: PropsType) => {
     const [footerClass, setFooterClass] = useState('');
 
     // If root height is less than window height, use styles to put footer at the bottom of the page
@@ -19,13 +20,14 @@ const Footer = ({ setViewHome }: PropsType) => {
         if (window.innerWidth > 800) {
             if (rootHeight) {
                 if (rootHeight < windowHeight) {
-                    setFooterClass('absolute bottom-0 w-full');
+                    // setFooterClass('absolute bottom-0 w-full');
+                    setFooterClass('translate-y-full');
                 } else {
                     setFooterClass('');
                 }
             }
         }
-    });
+    }, [viewShoppingCart]);
 
     return (
         <footer className={footerClass}>

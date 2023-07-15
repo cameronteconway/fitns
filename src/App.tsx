@@ -41,14 +41,17 @@ function App() {
     viewShoppingCart ? (pageContent = <ShoppingCart />) : null;
 
     return (
-        <div className='dark:bg-gray-800 min-h-screen'>
+        <div className='dark:bg-gray-800'>
             <Header
                 setViewHome={handleViewHome}
                 setViewWorkouts={handleViewWorkouts}
                 setViewShoppingCart={handleViewShoppingCards}
             />
             <Layout>{pageContent}</Layout>
-            <Footer setViewHome={handleViewHome} />
+            <Footer
+                setViewHome={handleViewHome}
+                viewShoppingCart={viewShoppingCart}
+            />
         </div>
     );
 }
