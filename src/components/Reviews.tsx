@@ -1,3 +1,4 @@
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import data from '../../data/reviews.json';
 
 type ReviewType = {
@@ -59,10 +60,11 @@ const Reviews = () => {
                     </p>
                 </blockquote>
                 <figcaption className='flex items-center justify-center space-x-3'>
-                    <img
+                    <LazyLoadImage
                         className='rounded-full w-10 h-10 ring-2 ring-gray-300 dark:ring-gray-500 p-1'
                         src={review.image}
-                        alt='profile picture'
+                        alt={`Profile picture for ${review.name}`}
+                        loading='lazy'
                     />
                     <div className='space-y-0.5 dark:text-white text-left'>
                         <div>{review.name}</div>
