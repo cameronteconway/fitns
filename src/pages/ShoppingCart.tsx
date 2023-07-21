@@ -28,10 +28,10 @@ const ShoppingCart = () => {
     !submitted
         ? (content = (
               <div className='py-10 '>
-                  <span className='block text-center pb-12 dark:text-white text-5xl md:text-6xl font-medium'>
+                  <span className='block pb-12 text-center text-5xl font-medium dark:text-white md:text-6xl'>
                       Shopping Cart.
                   </span>
-                  <div className='w-full mx-auto max-w-3xl py-4 px-8 bg-white border border-gray-200 rounded-lg dark:bg-gray-800 dark:border-gray-700 shadow-[rgba(0,_0,_0,_0.25)_0px_0px_30px_-12px] dark:shadow-[rgba(255,_250,_250,_0.25)_0px_0px_30px_-12px]'>
+                  <div className='mx-auto w-full max-w-3xl rounded-lg border border-gray-200 bg-white px-8 py-4 shadow-[rgba(0,_0,_0,_0.25)_0px_0px_30px_-12px] dark:border-gray-700 dark:bg-gray-800 dark:shadow-[rgba(255,_250,_250,_0.25)_0px_0px_30px_-12px]'>
                       <div className='flow-root'>
                           <ul
                               role='list'
@@ -40,7 +40,7 @@ const ShoppingCart = () => {
                               {renderShoppingCartList}
                               <li className='py-4 sm:py-6'>
                                   <div className='flex items-center space-x-4'>
-                                      <div className='flex-1 min-w-0'>
+                                      <div className='min-w-0 flex-1'>
                                           <p className='text-sm font-medium text-gray-900 dark:text-white'>
                                               Subtotal
                                           </p>
@@ -55,15 +55,15 @@ const ShoppingCart = () => {
                                   </div>
                               </li>
                           </ul>
-                          <div className='grid grid-cols-1 md:grid-cols-2 md:gap-x-2 lg:gap-x-2 gap-y-2'>
+                          <div className='grid grid-cols-1 gap-y-2 md:grid-cols-2 md:gap-x-2 lg:gap-x-2'>
                               <button
                                   onClick={onSubmitOrder}
                                   type='button'
-                                  className='justify-center text-white bg-[#050708] hover:bg-[#050708]/80 focus:ring-4 focus:outline-none focus:ring-[#050708]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:hover:bg-[#050708]/40 dark:focus:ring-gray-600 mr-2 mb-2'
+                                  className='mb-2 mr-2 inline-flex items-center justify-center rounded-lg bg-[#050708] px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-[#050708]/80 focus:outline-none focus:ring-4 focus:ring-[#050708]/50 dark:hover:bg-[#050708]/40 dark:focus:ring-gray-600'
                               >
                                   Pay with Apple Pay
                                   <svg
-                                      className='w-5 h-5 ml-2 -mr-1'
+                                      className='-mr-1 ml-2 h-5 w-5'
                                       aria-hidden='true'
                                       focusable='false'
                                       data-prefix='fab'
@@ -81,11 +81,11 @@ const ShoppingCart = () => {
                               <button
                                   onClick={onSubmitOrder}
                                   type='button'
-                                  className='justify-center text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-800 dark:bg-white dark:border-gray-700 dark:text-gray-900 dark:hover:bg-gray-200 mr-2 mb-2'
+                                  className='mb-2 mr-2 inline-flex items-center justify-center rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-center text-sm font-medium text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-700 dark:bg-white dark:text-gray-900 dark:hover:bg-gray-200 dark:focus:ring-gray-800'
                               >
                                   <svg
                                       aria-hidden='true'
-                                      className='w-10 h-3 mr-2 -ml-1'
+                                      className='-ml-1 mr-2 h-3 w-10'
                                       viewBox='0 0 660 203'
                                       fill='none'
                                       xmlns='http://www.w3.org/2000/svg'
@@ -104,10 +104,10 @@ const ShoppingCart = () => {
                               <button
                                   onClick={onSubmitOrder}
                                   type='button'
-                                  className='justify-center text-white bg-[#FF9119] hover:bg-[#FF9119]/80 focus:ring-4 focus:outline-none focus:ring-[#FF9119]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:hover:bg-[#FF9119]/80 dark:focus:ring-[#FF9119]/40 mr-2 mb-2'
+                                  className='mb-2 mr-2 inline-flex items-center justify-center rounded-lg bg-[#FF9119] px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-[#FF9119]/80 focus:outline-none focus:ring-4 focus:ring-[#FF9119]/50 dark:hover:bg-[#FF9119]/80 dark:focus:ring-[#FF9119]/40'
                               >
                                   <svg
-                                      className='w-4 h-4 mr-2 -ml-1'
+                                      className='-ml-1 mr-2 h-4 w-4'
                                       aria-hidden='true'
                                       focusable='false'
                                       data-prefix='fab'
@@ -126,10 +126,10 @@ const ShoppingCart = () => {
                               <button
                                   onClick={onSubmitOrder}
                                   type='button'
-                                  className='justify-center text-gray-900 bg-[#F7BE38] hover:bg-[#F7BE38]/90 focus:ring-4 focus:outline-none focus:ring-[#F7BE38]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#F7BE38]/50 mr-2 mb-2'
+                                  className='mb-2 mr-2 inline-flex items-center justify-center rounded-lg bg-[#F7BE38] px-5 py-2.5 text-center text-sm font-medium text-gray-900 hover:bg-[#F7BE38]/90 focus:outline-none focus:ring-4 focus:ring-[#F7BE38]/50 dark:focus:ring-[#F7BE38]/50'
                               >
                                   <svg
-                                      className='w-4 h-4 mr-2 -ml-1'
+                                      className='-ml-1 mr-2 h-4 w-4'
                                       aria-hidden='true'
                                       focusable='false'
                                       data-prefix='fab'
@@ -149,10 +149,10 @@ const ShoppingCart = () => {
                               <button
                                   onClick={onSubmitOrder}
                                   type='button'
-                                  className='justify-center text-gray-900 bg-gray-100 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 mr-2 mb-2'
+                                  className='mb-2 mr-2 inline-flex items-center justify-center rounded-lg bg-gray-100 px-5 py-2.5 text-center text-sm font-medium text-gray-900 hover:bg-gray-200 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-500'
                               >
                                   <svg
-                                      className='w-4 h-4 mr-2 -ml-1 text-[#626890]'
+                                      className='-ml-1 mr-2 h-4 w-4 text-[#626890]'
                                       aria-hidden='true'
                                       focusable='false'
                                       data-prefix='fab'
@@ -171,11 +171,11 @@ const ShoppingCart = () => {
                               <button
                                   onClick={onSubmitOrder}
                                   type='button'
-                                  className='justify-center text-white bg-[#2557D6] hover:bg-[#2557D6]/90 focus:ring-4 focus:ring-[#2557D6]/50 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#2557D6]/50 mr-2 mb-2'
+                                  className='mb-2 mr-2 inline-flex items-center justify-center rounded-lg bg-[#2557D6] px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-[#2557D6]/90 focus:outline-none focus:ring-4 focus:ring-[#2557D6]/50 dark:focus:ring-[#2557D6]/50'
                               >
                                   <svg
                                       aria-hidden='true'
-                                      className='w-10 h-3 mr-2 -ml-1'
+                                      className='-ml-1 mr-2 h-3 w-10'
                                       viewBox='0 0 256 64'
                                       fill='none'
                                       xmlns='http://www.w3.org/2000/svg'
@@ -194,7 +194,7 @@ const ShoppingCart = () => {
           ))
         : (content = (
               <div className='py-10'>
-                  <span className='block text-center pb-12 dark:text-white text-5xl md:text-6xl font-medium'>
+                  <span className='block pb-12 text-center text-5xl font-medium dark:text-white md:text-6xl'>
                       Thank you for your purchase.
                   </span>
               </div>

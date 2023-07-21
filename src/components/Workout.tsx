@@ -28,8 +28,8 @@ const Workout = ({
         (workout: string, index: number) => {
             const test = workout.split(' - ')[0];
             return (
-                <li className='flex items-center space-x-1 mb-1' key={index}>
-                    <i className='flex-shrink-0 text-gray-800 dark:text-white bi bi-check text-xl'></i>
+                <li className='mb-1 flex items-center space-x-1' key={index}>
+                    <i className='bi bi-check flex-shrink-0 text-xl text-gray-800 dark:text-white'></i>
                     <span className='text-gray-900 dark:text-white'>
                         {test}
                     </span>
@@ -41,7 +41,7 @@ const Workout = ({
     const renderBodyPart = workout.bodyPart.map(
         (bodyPart: string, index: number) => (
             <li
-                className='bg-gray-100 max-w-max mt-1 inline-block text-gray-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-500 dark:text-gray-100 border border-gray-600'
+                className='mr-2 mt-1 inline-block max-w-max rounded border border-gray-600 bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-800 dark:bg-gray-500 dark:text-gray-100'
                 key={index}
             >
                 {bodyPart}
@@ -52,7 +52,7 @@ const Workout = ({
     const renderCategory = workout.category.map(
         (category: string, index: number) => (
             <li
-                className='bg-gray-100 max-w-max mt-1 inline-block text-gray-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-500 dark:text-gray-100 border border-gray-600'
+                className='mr-2 mt-1 inline-block max-w-max rounded border border-gray-600 bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-800 dark:bg-gray-500 dark:text-gray-100'
                 key={index}
             >
                 {category}
@@ -61,25 +61,25 @@ const Workout = ({
     );
 
     return (
-        <div className='border-2 dark:bg-gray-800 relative rounded-lg border-gray-200 dark:border-white py-7 px-6 flex flex-col shadow-[rgba(0,_0,_0,_0.25)_0px_0px_30px_-12px] dark:shadow-[rgba(255,_250,_250,_0.25)_0px_0px_40px_-12px]'>
+        <div className='relative flex flex-col rounded-lg border-2 border-gray-200 px-6 py-7 shadow-[rgba(0,_0,_0,_0.25)_0px_0px_30px_-12px] dark:border-white dark:bg-gray-800 dark:shadow-[rgba(255,_250,_250,_0.25)_0px_0px_40px_-12px]'>
             {workout.popular ? (
-                <span className='absolute -top-5 dark:text-gray-800 font-medium text-sm border-2 text-white border-gray-900 bg-gray-900 dark:border-white dark:bg-white px-3 py-2 rounded-full ml-auto mr-auto left-0 right-0 text-center max-w-max'>
+                <span className='absolute -top-5 left-0 right-0 ml-auto mr-auto max-w-max rounded-full border-2 border-gray-900 bg-gray-900 px-3 py-2 text-center text-sm font-medium text-white dark:border-white dark:bg-white dark:text-gray-800'>
                     Popular
                 </span>
             ) : null}
             <span>{workout.popular}</span>
-            <span className='block dark:text-white font-bold text-3xl'>
+            <span className='block text-3xl font-bold dark:text-white'>
                 {workout.name}
             </span>
-            <span className='block dark:text-white font-medium text-2xl mb-4'>
+            <span className='mb-4 block text-2xl font-medium dark:text-white'>
                 {new Intl.NumberFormat('en-GB', {
                     style: 'currency',
                     currency: 'GBP',
                 }).format(workout.price)}
             </span>
-            <p className='dark:text-gray-400 font-light'>{workout.summary}</p>
+            <p className='font-light dark:text-gray-400'>{workout.summary}</p>
             <span
-                className='block h-0.5 my-6'
+                className='my-6 block h-0.5'
                 style={{
                     background:
                         'repeating-linear-gradient(90deg,#cbd5e1 0 8px,#0000 0 18px)',
@@ -88,11 +88,11 @@ const Workout = ({
 
             <ul>{renderIncludes}</ul>
 
-            <span className='text-sm font-medium dark:text-gray-200 mt-3'>
+            <span className='mt-3 text-sm font-medium dark:text-gray-200'>
                 Body Part
             </span>
             <ul>{renderBodyPart}</ul>
-            <span className='text-sm font-medium dark:text-gray-200 mt-3'>
+            <span className='mt-3 text-sm font-medium dark:text-gray-200'>
                 Category
             </span>
             <ul className='mb-6'>{renderCategory}</ul>
@@ -101,18 +101,18 @@ const Workout = ({
                 <button
                     type='button'
                     disabled
-                    className='border-gray-300 inline-flex disabled:opacity-50 justify-center relative px-3 py-2 font-medium mt-auto border-2 rounded-md dark:border-white dark:text-white dark:bg-transparent'
+                    className='relative mt-auto inline-flex justify-center rounded-md border-2 border-gray-300 px-3 py-2 font-medium disabled:opacity-50 dark:border-white dark:bg-transparent dark:text-white'
                 >
                     Item already in cart
                 </button>
             ) : (
                 <button
                     type='button'
-                    className='border-gray-300 inline-flex relative px-3 py-2 font-medium mt-auto border-2 rounded-md dark:border-white hover:bg-gray-900 hover:text-white hover:border-gray-900 dark:text-white dark:bg-transparent dark:hover:bg-white dark:hover:text-gray-800 dark:hover:border-white'
+                    className='relative mt-auto inline-flex rounded-md border-2 border-gray-300 px-3 py-2 font-medium hover:border-gray-900 hover:bg-gray-900 hover:text-white dark:border-white dark:bg-transparent dark:text-white dark:hover:border-white dark:hover:bg-white dark:hover:text-gray-800'
                     onClick={onAddToShoppingCart}
                 >
                     Add to cart
-                    <i className='right-3 bottom-1.5 text-xl absolute bi bi-plus-lg'></i>
+                    <i className='bi bi-plus-lg absolute bottom-1.5 right-3 text-xl'></i>
                 </button>
             )}
         </div>

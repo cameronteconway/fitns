@@ -15,7 +15,7 @@ const SubscriptionTile = ({ data }: Props) => {
     const listItems = data.includes.map((text, index) => {
         return (
             <li className='flex items-center space-x-3' key={index}>
-                <i className='flex-shrink-0 text-gray-800 dark:text-white bi bi-check-circle-fill'></i>
+                <i className='bi bi-check-circle-fill flex-shrink-0 text-gray-800 dark:text-white'></i>
                 <span className='text-gray-900 dark:text-gray-300'>{text}</span>
             </li>
         );
@@ -28,36 +28,36 @@ const SubscriptionTile = ({ data }: Props) => {
     }`;
 
     return (
-        <div className='border-2 relative rounded-lg dark:border-gray-300 py-6 px-6 flex flex-col shadow-[rgba(0,_0,_0,_0.25)_0px_0px_50px_-12px] dark:shadow-[rgba(255,_250,_250,_0.25)_0px_0px_30px_-12px]'>
+        <div className='relative flex flex-col rounded-lg border-2 px-6 py-6 shadow-[rgba(0,_0,_0,_0.25)_0px_0px_50px_-12px] dark:border-gray-300 dark:shadow-[rgba(255,_250,_250,_0.25)_0px_0px_30px_-12px]'>
             {data.popular ? (
-                <span className='absolute -top-5 dark:text-gray-800 font-medium text-sm border-2 text-white border-gray-900 bg-gray-900 dark:border-white dark:bg-white px-3 py-2 rounded-full ml-auto mr-auto left-0 right-0 text-center max-w-max'>
+                <span className='absolute -top-5 left-0 right-0 ml-auto mr-auto max-w-max rounded-full border-2 border-gray-900 bg-gray-900 px-3 py-2 text-center text-sm font-medium text-white dark:border-white dark:bg-white dark:text-gray-800'>
                     Most Popular
                 </span>
             ) : null}
-            <span className='block dark:text-white font-medium text-2xl font-logo'>
+            <span className='block font-logo text-2xl font-medium dark:text-white'>
                 {data.name}
             </span>
             {typeof data.price === 'string' ? (
-                <span className='block dark:text-white font-medium text-4xl mb-4'>
+                <span className='mb-4 block text-4xl font-medium dark:text-white'>
                     {data.price}
                 </span>
             ) : (
-                <span className='block dark:text-white font-medium text-4xl mb-4'>
+                <span className='mb-4 block text-4xl font-medium dark:text-white'>
                     {`£${data.price}`}{' '}
-                    <p className='dark:text-gray-400 text-xl font-light inline-block'>
+                    <p className='inline-block text-xl font-light dark:text-gray-400'>
                         per month
                     </p>
                 </span>
             )}
-            <p className='dark:text-gray-400 mb-6 font-light'>{data.summary}</p>
+            <p className='mb-6 font-light dark:text-gray-400'>{data.summary}</p>
 
-            <ul className='space-y-4 text-left mb-8 text-gray-500 dark:text-gray-400'>
+            <ul className='mb-8 space-y-4 text-left text-gray-500 dark:text-gray-400'>
                 {listItems}
             </ul>
 
             <button type='button' className={buttonClass}>
                 {data.popular ? 'Start a free trial' : 'Explore'}
-                <i className='right-3 bottom-1.5 text-xl absolute bi bi-arrow-right'></i>
+                <i className='bi bi-arrow-right absolute bottom-1.5 right-3 text-xl'></i>
             </button>
         </div>
     );

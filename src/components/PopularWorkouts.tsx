@@ -18,19 +18,19 @@ const PopularWorkouts = ({ setViewWorkouts }: PropsType) => {
 
     return (
         <div className='py-10'>
-            <h3 className='mb-6 text-4xl font-logo font-medium md:text-5xl text-gray-900 dark:text-white'>
+            <h3 className='mb-6 font-logo text-4xl font-medium text-gray-900 dark:text-white md:text-5xl'>
                 Popular Workouts
             </h3>
-            <div className='grid grid-cols-1 md:grid-cols-3 md:gap-x-4 lg:gap-x-8 gap-y-8'>
+            <div className='grid grid-cols-1 gap-y-8 md:grid-cols-3 md:gap-x-4 lg:gap-x-8'>
                 {renderPopularWorkouts}
             </div>
             <button
                 type='button'
                 onClick={setViewWorkouts}
-                className='my-4 ml-auto order-last flex items-center space-x-3 rounded-lg py-2 px-4 hover:bg-gray-200 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:text-white dark:text-white w-100 border-2 focus:outline-none dark:focus:ring-gray-800 dark:border-gray-600'
+                className='w-100 order-last my-4 ml-auto flex items-center space-x-3 rounded-lg border-2 px-4 py-2 hover:bg-gray-200 focus:outline-none dark:border-gray-600 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white dark:focus:text-white dark:focus:ring-gray-800'
             >
                 Find more workouts
-                <i className='ml-2 text-xl bi bi-arrow-right'></i>
+                <i className='bi bi-arrow-right ml-2 text-xl'></i>
             </button>
         </div>
     );

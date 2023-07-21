@@ -140,20 +140,20 @@ const Workouts = () => {
 
     return (
         <div className='py-10'>
-            <span className='block text-center pb-12 dark:text-white text-5xl md:text-6xl font-medium'>
+            <span className='block pb-12 text-center text-5xl font-medium dark:text-white md:text-6xl'>
                 Our workout catalogue.
             </span>
-            <div className='grid grid-cols-1 md:grid-cols-3 mb-10 md:gap-x-4 lg:gap-x-8 gap-y-4'>
+            <div className='mb-10 grid grid-cols-1 gap-y-4 md:grid-cols-3 md:gap-x-4 lg:gap-x-8'>
                 <form className='relative'>
                     <label
-                        className='block mb-2 text-sm font-medium text-gray-900 dark:text-white'
+                        className='mb-2 block text-sm font-medium text-gray-900 dark:text-white'
                         htmlFor='filterBodyPart'
                     >
                         Choose body part:
                     </label>
                     <select
                         id='filterBodyPart'
-                        className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-2.5 px-4 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
+                        className='block w-full rounded-lg border border-gray-300 bg-gray-50 px-4 py-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500'
                         style={{ appearance: 'none' }}
                         value={bodyPart}
                         onChange={handleBodyPartSelection}
@@ -161,19 +161,19 @@ const Workouts = () => {
                         <option value='All'>All</option>
                         {renderBodyPartSelection}
                     </select>
-                    <i className='absolute right-4 top-[35px] text-gray-800 dark:text-white bi bi-chevron-down text-xl'></i>
+                    <i className='bi bi-chevron-down absolute right-4 top-[35px] text-xl text-gray-800 dark:text-white'></i>
                 </form>
 
                 <form className='relative'>
                     <label
-                        className='block mb-2 text-sm font-medium text-gray-900 dark:text-white'
+                        className='mb-2 block text-sm font-medium text-gray-900 dark:text-white'
                         htmlFor='filterCategory'
                     >
                         Choose category:
                     </label>
                     <select
                         id='filterCategory'
-                        className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-2.5 px-4 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
+                        className='block w-full rounded-lg border border-gray-300 bg-gray-50 px-4 py-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500'
                         style={{ appearance: 'none' }}
                         value={category}
                         onChange={handleCategorySelection}
@@ -181,10 +181,10 @@ const Workouts = () => {
                         <option value='All'>All</option>
                         {renderCategorySelection}
                     </select>
-                    <i className='absolute right-4 top-[35px] text-gray-800 dark:text-white bi bi-chevron-down text-xl'></i>
+                    <i className='bi bi-chevron-down absolute right-4 top-[35px] text-xl text-gray-800 dark:text-white'></i>
                 </form>
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-3 md:gap-x-4 lg:gap-x-8 gap-y-8'>
+            <div className='grid grid-cols-1 gap-y-8 md:grid-cols-3 md:gap-x-4 lg:gap-x-8'>
                 {seperatedRenderedWorkouts[currentPage - 1]}
             </div>
             <Pagination

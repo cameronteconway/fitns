@@ -19,10 +19,10 @@ const Subscriptions = () => {
 
     return (
         <section className='py-10'>
-            <span className='block text-center pb-12 dark:text-white text-5xl md:text-6xl font-medium'>
+            <span className='block pb-12 text-center text-5xl font-medium dark:text-white md:text-6xl'>
                 Find a plan that suits you.
             </span>
-            <div className='grid grid-cols-1 md:grid-cols-3 md:gap-x-4 lg:gap-x-8 gap-y-8'>
+            <div className='grid grid-cols-1 gap-y-8 md:grid-cols-3 md:gap-x-4 lg:gap-x-8'>
                 {subscriptionTiles}
             </div>
         </section>

@@ -31,26 +31,26 @@ const Footer = ({ setViewHome, viewShoppingCart }: PropsType) => {
 
     return (
         <footer className={footerClass}>
-            <div className='bg-white dark:bg-gray-800 px-4 lg:px-6 pb-6'>
+            <div className='bg-white px-4 pb-6 dark:bg-gray-800 lg:px-6'>
                 <div className='mx-auto w-full max-w-screen-xl'>
                     <div className='md:flex md:justify-between'>
-                        <div className='hidden md:block md:mb-0'>
+                        <div className='hidden md:mb-0 md:block'>
                             <button
                                 type='button'
                                 onClick={setViewHome}
-                                className='flex items-center relative'
+                                className='relative flex items-center'
                             >
-                                <span className='self-center mt-1 text-4xl md:text-5xl font-semibold whitespace-nowrap font-logo text-grey-800 dark:text-white hover:text-red-600  dark:focus:text-gray-400'>
+                                <span className='text-grey-800 mt-1 self-center whitespace-nowrap font-logo text-4xl font-semibold hover:text-red-600 dark:text-white dark:focus:text-gray-400 md:text-5xl'>
                                     FitNs
                                 </span>
                             </button>
                         </div>
-                        <div className='grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3'>
+                        <div className='grid grid-cols-2 gap-8 sm:grid-cols-3 sm:gap-6'>
                             <div>
-                                <h2 className='mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white'>
+                                <h2 className='mb-6 text-sm font-semibold uppercase text-gray-900 dark:text-white'>
                                     Resources
                                 </h2>
-                                <ul className='text-gray-500 dark:text-gray-400 font-medium'>
+                                <ul className='font-medium text-gray-500 dark:text-gray-400'>
                                     <li className='mb-4'>
                                         <a href='#' className='hover:underline'>
                                             Help Centre
@@ -64,10 +64,10 @@ const Footer = ({ setViewHome, viewShoppingCart }: PropsType) => {
                                 </ul>
                             </div>
                             <div>
-                                <h2 className='mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white'>
+                                <h2 className='mb-6 text-sm font-semibold uppercase text-gray-900 dark:text-white'>
                                     Follow us
                                 </h2>
-                                <ul className='text-gray-500 dark:text-gray-400 font-medium'>
+                                <ul className='font-medium text-gray-500 dark:text-gray-400'>
                                     <li className='mb-4'>
                                         <a
                                             href='#'
@@ -84,10 +84,10 @@ const Footer = ({ setViewHome, viewShoppingCart }: PropsType) => {
                                 </ul>
                             </div>
                             <div>
-                                <h2 className='mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white'>
+                                <h2 className='mb-6 text-sm font-semibold uppercase text-gray-900 dark:text-white'>
                                     Legal
                                 </h2>
-                                <ul className='text-gray-500 dark:text-gray-400 font-medium'>
+                                <ul className='font-medium text-gray-500 dark:text-gray-400'>
                                     <li className='mb-4'>
                                         <a href='#' className='hover:underline'>
                                             Privacy Policy
@@ -102,9 +102,9 @@ const Footer = ({ setViewHome, viewShoppingCart }: PropsType) => {
                             </div>
                         </div>
                     </div>
-                    <hr className='my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8' />
+                    <hr className='my-6 border-gray-200 dark:border-gray-700 sm:mx-auto lg:my-8' />
                     <div className='sm:flex sm:items-center sm:justify-between'>
-                        <span className='text-sm text-gray-500 sm:text-center dark:text-gray-400'>
+                        <span className='text-sm text-gray-500 dark:text-gray-400 sm:text-center'>
                             © 2023{' '}
                             <a
                                 href='https://cameronconway.co.uk'
@@ -114,13 +114,13 @@ const Footer = ({ setViewHome, viewShoppingCart }: PropsType) => {
                             </a>
                             . All Rights Reserved.
                         </span>
-                        <div className='flex mt-4 space-x-5 sm:justify-center sm:mt-0'>
+                        <div className='mt-4 flex space-x-5 sm:mt-0 sm:justify-center'>
                             <a
                                 href='#'
                                 className='text-gray-500 hover:text-gray-900 dark:hover:text-white'
                             >
                                 <svg
-                                    className='w-4 h-4'
+                                    className='h-4 w-4'
                                     aria-hidden='true'
                                     xmlns='http://www.w3.org/2000/svg'
                                     fill='currentColor'
@@ -139,7 +139,7 @@ const Footer = ({ setViewHome, viewShoppingCart }: PropsType) => {
                                 className='text-gray-500 hover:text-gray-900 dark:hover:text-white'
                             >
                                 <svg
-                                    className='w-4 h-4'
+                                    className='h-4 w-4'
                                     aria-hidden='true'
                                     xmlns='http://www.w3.org/2000/svg'
                                     fill='currentColor'
@@ -156,7 +156,7 @@ const Footer = ({ setViewHome, viewShoppingCart }: PropsType) => {
                                 className='text-gray-500 hover:text-gray-900 dark:hover:text-white'
                             >
                                 <svg
-                                    className='w-4 h-4'
+                                    className='h-4 w-4'
                                     aria-hidden='true'
                                     xmlns='http://www.w3.org/2000/svg'
                                     fill='currentColor'
@@ -175,7 +175,7 @@ const Footer = ({ setViewHome, viewShoppingCart }: PropsType) => {
                                 className='text-gray-500 hover:text-gray-900 dark:hover:text-white'
                             >
                                 <svg
-                                    className='w-4 h-4'
+                                    className='h-4 w-4'
                                     aria-hidden='true'
                                     xmlns='http://www.w3.org/2000/svg'
                                     fill='currentColor'
@@ -194,7 +194,7 @@ const Footer = ({ setViewHome, viewShoppingCart }: PropsType) => {
                                 className='text-gray-500 hover:text-gray-900 dark:hover:text-white'
                             >
                                 <svg
-                                    className='w-4 h-4'
+                                    className='h-4 w-4'
                                     aria-hidden='true'
                                     xmlns='http://www.w3.org/2000/svg'
                                     fill='currentColor'

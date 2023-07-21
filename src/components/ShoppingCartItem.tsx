@@ -17,7 +17,7 @@ const ShoppingCartItem = ({ item, dispatch, REDUCER_ACTIONS }: PropsType) => {
 
     return (
         <li className='py-4 sm:py-6'>
-            <div className='flex mb-4 justify-between'>
+            <div className='mb-4 flex justify-between'>
                 <p className='text-xl font-medium text-gray-900 dark:text-white'>
                     {item.name}
                 </p>

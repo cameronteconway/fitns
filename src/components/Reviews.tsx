@@ -20,7 +20,7 @@ const Reviews = () => {
                 starsArray.push(
                     <svg
                         key={i}
-                        className='w-4 h-4 text-yellow-300 mr-1'
+                        className='mr-1 h-4 w-4 text-yellow-300'
                         aria-hidden='true'
                         xmlns='http://www.w3.org/2000/svg'
                         fill='currentColor'
@@ -33,7 +33,7 @@ const Reviews = () => {
                 starsArray.push(
                     <svg
                         key={i}
-                        className='w-4 h-4 text-gray-300 mr-1 dark:text-gray-500'
+                        className='mr-1 h-4 w-4 text-gray-300 dark:text-gray-500'
                         aria-hidden='true'
                         xmlns='http://www.w3.org/2000/svg'
                         fill='currentColor'
@@ -51,26 +51,26 @@ const Reviews = () => {
     const review: JSX.Element | JSX.Element[] = data.reviews.map(
         (review: ReviewType) => (
             <>
-                <blockquote className='max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400'>
+                <blockquote className='mx-auto mb-4 max-w-2xl text-gray-500 dark:text-gray-400 lg:mb-8'>
                     <h3 className='text-lg text-gray-900 dark:text-white'>
                         {review.summary}
                     </h3>
-                    <p className='dark:text-gray-400 my-3 font-light'>
+                    <p className='my-3 font-light dark:text-gray-400'>
                         {review.review}
                     </p>
                 </blockquote>
                 <figcaption className='flex items-center justify-center space-x-3'>
                     <LazyLoadImage
-                        className='rounded-full w-10 h-10 ring-2 ring-gray-300 dark:ring-gray-500 p-1'
+                        className='h-10 w-10 rounded-full p-1 ring-2 ring-gray-300 dark:ring-gray-500'
                         src={review.image}
                         alt={`Profile picture for ${review.name}`}
                         loading='lazy'
                     />
-                    <div className='space-y-0.5 dark:text-white text-left'>
+                    <div className='space-y-0.5 text-left dark:text-white'>
                         <div>{review.name}</div>
                     </div>
                 </figcaption>
-                <div className='flex items-center mt-4'>
+                <div className='mt-4 flex items-center'>
                     {renderStars(review.starRating)}
                 </div>
             </>
@@ -79,17 +79,17 @@ const Reviews = () => {
 
     return (
         <section className='py-10'>
-            <div className='grid border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 md:grid-cols-2'>
-                <figure className='flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-tl-lg md:border-r dark:bg-gray-800 dark:border-gray-700'>
+            <div className='grid rounded-lg border border-gray-200 shadow-sm dark:border-gray-700 md:grid-cols-2'>
+                <figure className='flex flex-col items-center justify-center rounded-t-lg border-b border-gray-200 bg-white p-8 text-center dark:border-gray-700 dark:bg-gray-800 md:rounded-t-none md:rounded-tl-lg md:border-r'>
                     {review[0]}
                 </figure>
-                <figure className='flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-tr-lg dark:bg-gray-800 dark:border-gray-700'>
+                <figure className='flex flex-col items-center justify-center rounded-tr-lg border-b border-gray-200 bg-white p-8 text-center dark:border-gray-700 dark:bg-gray-800'>
                     {review[1]}
                 </figure>
-                <figure className='flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-bl-lg md:border-b-0 md:border-r dark:bg-gray-800 dark:border-gray-700'>
+                <figure className='flex flex-col items-center justify-center rounded-bl-lg border-b border-gray-200 bg-white p-8 text-center dark:border-gray-700 dark:bg-gray-800 md:border-b-0 md:border-r'>
                     {review[2]}
                 </figure>
-                <figure className='flex flex-col items-center justify-center p-8 text-center bg-white border-gray-200 rounded-b-lg md:rounded-br-lg dark:bg-gray-800 dark:border-gray-700'>
+                <figure className='flex flex-col items-center justify-center rounded-b-lg border-gray-200 bg-white p-8 text-center dark:border-gray-700 dark:bg-gray-800 md:rounded-br-lg'>
                     {review[3]}
                 </figure>
             </div>

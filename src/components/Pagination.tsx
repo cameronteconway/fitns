@@ -49,7 +49,7 @@ const Pagination = ({
     }`;
 
     return (
-        <div className='flex flex-col mt-8 items-center'>
+        <div className='mt-8 flex flex-col items-center'>
             <span className='text-sm text-gray-700 dark:text-gray-400'>
                 Showing{' '}
                 <span className='font-semibold text-gray-900 dark:text-white'>
@@ -65,7 +65,7 @@ const Pagination = ({
                 </span>{' '}
                 workouts
             </span>
-            <div className='inline-flex mt-2 xs:mt-0'>
+            <div className='xs:mt-0 mt-2 inline-flex'>
                 <button
                     type='button'
                     onClick={previousPage}
@@ -73,7 +73,7 @@ const Pagination = ({
                     tabIndex={currentPage == 1 ? -1 : 0}
                 >
                     <svg
-                        className='w-3.5 h-3.5 mr-2'
+                        className='mr-2 h-3.5 w-3.5'
                         aria-hidden='true'
                         xmlns='http://www.w3.org/2000/svg'
                         fill='none'
@@ -99,7 +99,7 @@ const Pagination = ({
                 >
                     Next
                     <svg
-                        className='w-3.5 h-3.5 ml-2'
+                        className='ml-2 h-3.5 w-3.5'
                         aria-hidden='true'
                         xmlns='http://www.w3.org/2000/svg'
                         fill='none'
