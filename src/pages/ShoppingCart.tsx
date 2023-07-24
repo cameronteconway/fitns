@@ -27,7 +27,7 @@ const ShoppingCart = () => {
 
     !submitted
         ? (content = (
-              <div className='py-10 '>
+              <div className='py-10'>
                   <span className='block pb-12 text-center text-5xl font-medium dark:text-white md:text-6xl'>
                       Shopping Cart.
                   </span>
@@ -194,7 +194,7 @@ const ShoppingCart = () => {
           ))
         : (content = (
               <div className='py-10'>
-                  <span className='block pb-12 text-center text-5xl font-medium dark:text-white md:text-6xl'>
+                  <span className='py-15 block text-center text-5xl font-medium dark:text-white md:text-6xl'>
                       Thank you for your purchase.
                   </span>
               </div>

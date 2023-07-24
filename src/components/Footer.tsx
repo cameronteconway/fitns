@@ -1,4 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+import useShoppingCart from '../hooks/useShoppingCart';
 import { useEffect, useState } from 'react';
 
 type PropsType = {
@@ -8,6 +9,7 @@ type PropsType = {
 
 const Footer = ({ setViewHome, viewShoppingCart }: PropsType) => {
     const [footerClass, setFooterClass] = useState('');
+    const { shoppingCart } = useShoppingCart();
 
     // If root height is less than window height, use styles to put footer at the bottom of the page
     const root = document.querySelector('main');
@@ -17,17 +19,27 @@ const Footer = ({ setViewHome, viewShoppingCart }: PropsType) => {
         rootHeight = root?.clientHeight;
         windowHeight = window.innerHeight;
 
+        console.log(shoppingCart);
+
+        // For non-mobile devices
         if (window.innerWidth > 800) {
             if (rootHeight) {
                 if (rootHeight < windowHeight) {
-                    // setFooterClass('absolute bottom-0 w-full');
-                    setFooterClass('translate-y-full');
+                    if (shoppingCart.length == 0) {
+                        setFooterClass(
+                            'translate-y-full w-full bottom-[220px] absolute'
+                        );
+                    } else {
+                        setFooterClass(
+                            'translate-y-full bottom-[80px] relative'
+                        );
+                    }
                 } else {
                     setFooterClass('');
                 }
             }
         }
-    }, [viewShoppingCart]);
+    }, [viewShoppingCart, shoppingCart]);
 
     return (
         <footer className={footerClass}>

@@ -41,7 +41,7 @@ function App() {
     viewShoppingCart ? (pageContent = <ShoppingCart />) : null;
 
     return (
-        <div className='dark:bg-gray-800'>
+        <div className='h-screen dark:bg-gray-800'>
             <Header
                 setViewHome={handleViewHome}
                 setViewWorkouts={handleViewWorkouts}
